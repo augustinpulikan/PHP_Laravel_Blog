@@ -7,7 +7,7 @@
 		<div class="col-md-8 col-md-offset-2">
 			<h1>Create a new post</h1>
 			<hr>
-			{!! Form::open(['route' => 'post.store']) !!}
+			{!! Form::open(['route' => 'posts.store']) !!}
 				{{Form::label('title', 'Title:')}}
     			{{Form::text('title', null, array('class'=>'form-control'))}}
 
