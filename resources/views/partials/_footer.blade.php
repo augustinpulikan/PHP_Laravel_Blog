@@ -1,2 +1,2 @@
 <hr>
-<p class="text-center ">copyright reserved for augustin@pulikan123</p>
+<p class="text-center ">copyright reserved for augustinpulikan</p>
