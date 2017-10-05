@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @include('_head')
+    @include('partials._head')
   </head>
   <body>
       <!-- navbar   -->
-    @include('_nav')
+    @include('partials._nav')
 
     <div class="container">
-      @include('_messages')
+      @include('partials._messages')
       @yield('content')
 
-      @include('_footer')
+      @include('partials._footer')
     </div> <!--   end of container -->
 
-        @include('_javascript')
+        @include('partials._javascript')
   </body>
 </html>
