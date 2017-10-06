@@ -93,7 +93,19 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //validate the data
+         $this->validate($request, array(
+            'title'=>'required|max:255',
+            'body'=>'required'
+            ));
+        //save the data 
+         $post = Post::find($id);
+         $post->title = $request->input('title');
+         $post->body = $request->input('body');
+         $post->save();
+        //redirect with flash data
+         Session::flash('success','This post was successfully saved!');
+         return redirect()->route('posts.show',$post->id);
     }
 
     /**
