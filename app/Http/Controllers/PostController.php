@@ -18,7 +18,7 @@ class PostController extends Controller
     public function index()
     {
         //retrive all posts
-        $posts = Post::all();
+        $posts = Post::Paginate(10);
         //return view
         return view('posts.index')->withPosts($posts);
 
