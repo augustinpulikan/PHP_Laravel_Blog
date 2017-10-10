@@ -7,9 +7,19 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Post;
 use Session;
+use Validator;
+
 
 class PostController extends Controller
 {
+
+     public function __construct()
+    {
+       
+         $this->middleware('auth');
+    }
+
+    
     /**
      * Display a listing of the resource.
      *
