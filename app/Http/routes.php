@@ -21,8 +21,12 @@ Route::get('auth/logout', ['as' => 'logout', 'uses'=> 'Auth\AuthController@getLo
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
+//categories
+Route::resource('categories', 'CategoryController', ['except' => ['create']]);
+
 Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getAbout');
 Route::get('', 'PagesController@getIndex');
+
 Route::resource('posts', 'PostController');
 

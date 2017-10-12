@@ -13,9 +13,15 @@
 				<dl class="dl-horizontal">
 					<label>Url:</label>
 					<p><a href="{{route('blog.single',$post->slug)}}">{{route('blog.single',$post->slug)}}</a></p>
+				</dl>	
+				<dl class="dl-horizontal">
+					<label>Category:</label>
+					<p>{{$post->category->name}}</p>
+				</dl>	
+				<dl class="dl-horizontal">	
 					<label>Created at:</label>
 					<p>{{date('M j, Y h:ia',strtotime($post->created_at))}}</p>
-				</dl>
+				</dl>	
 				<dl class="dl-horizontal">
 					<label>Updated at:</label>
 					<p>{{date('M j, Y h:ia',strtotime($post->updated_at))}}</p>
